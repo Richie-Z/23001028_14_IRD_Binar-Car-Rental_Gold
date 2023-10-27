@@ -71,3 +71,56 @@
   top: 15.8rem;
   right: 0;
 }
+
+#our-services {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 12rem;
+}
+
+#our-services .left {
+  width: 100%;
+  text-align: left;
+}
+
+#our-services .left #green-circle {
+  position: absolute;
+  left: 7rem;
+}
+
+#our-services .left #red-circle {
+  position: absolute;
+  left: 33rem;
+  margin-top: 4rem;
+}
+
+#our-services .left #yellow-circle {
+  position: absolute;
+  left: 10rem;
+  margin-top: 21rem;
+}
+
+#our-services .right {
+  width: 100%;
+  margin: auto;
+  font-weight: 700;
+}
+
+#our-services .right h3 {
+  font-size: 24px;
+}
+
+#our-services .right p:not(.service-list p) {
+  padding: 1rem 0rem;
+}
+
+#our-services .right p span {
+  vertical-align: middle;
+  padding-right: 0.8rem;
+}
+
+#our-services .service-list p {
+  padding: 0.5rem 0rem;
+  user-select: none;
+  cursor: pointer;
+}
