@@ -16,9 +16,16 @@
   font-size: 15px;
 }
 
-h3{
+.title-bx{
   font-weight: 700;
+}
+
+.title-bx h3{
   font-size: 24px;
+}
+
+.title-bx p{
+  padding: 1rem 0rem;
 }
 
 #hero {
@@ -110,10 +117,6 @@ h3{
   font-weight: 700;
 }
 
-#our-services .right p:not(.service-list p) {
-  padding: 1rem 0rem;
-}
-
 #our-services .right p span {
   vertical-align: middle;
   padding-right: 0.8rem;
@@ -127,11 +130,6 @@ h3{
 
 #why-us{
   padding: 5rem 12rem;
-}
-
-#why-us p:not(.list-item p){
-  padding: 1rem 0rem;
-  font-weight: 700;
 }
 
 #why-us .list-item{
@@ -160,23 +158,3 @@ h3{
 #why-us .list-item .item .item-title{
   font-size:18px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
