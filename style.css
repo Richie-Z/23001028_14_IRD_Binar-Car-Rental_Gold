@@ -16,6 +16,11 @@
   font-size: 15px;
 }
 
+h3{
+  font-weight: 700;
+  font-size: 24px;
+}
+
 #hero {
   background-color: #f1f3ff;
 }
@@ -51,7 +56,6 @@
 
 .hero-section .left p {
   padding: 1rem 0rem;
-  font-size: 14px;
   line-height: 20px;
 }
 
@@ -106,10 +110,6 @@
   font-weight: 700;
 }
 
-#our-services .right h3 {
-  font-size: 24px;
-}
-
 #our-services .right p:not(.service-list p) {
   padding: 1rem 0rem;
 }
@@ -124,3 +124,53 @@
   user-select: none;
   cursor: pointer;
 }
+
+#why-us{
+  padding: 5rem 12rem;
+}
+
+#why-us p{
+  padding: 1rem 0rem;
+  font-weight: 700;
+}
+
+#why-us .list-item{
+  display:flex;
+  width: 100%;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+#why-us .list-item .item{
+  border: 1px solid #D0D0D0;
+  padding: 2rem;
+  border-radius:10px;
+  max-width: 25%;
+}
+#why-us .list-item .item .item-icon{
+  width:35px
+}
+
+#why-us .list-item .item .item-title{
+  font-size:18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
