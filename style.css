@@ -24,6 +24,11 @@
   font-size: 24px;
 }
 
+.title-bx h1{
+  font-size: 36px;
+  line-height: 54px;
+}
+
 .title-bx p{
   padding: 1rem 0rem;
 }
@@ -211,3 +216,26 @@
   stroke: #fff
 }
 
+#cta-banner{
+  margin: 2rem 6rem; 
+  text-align:center;
+  background-color: #0D28A6;
+  border-radius: 1rem;
+  padding: 7rem 0rem;
+}
+
+#cta-banner .title-bx {
+  margin:auto;
+  width:50%;
+}
+
+#cta-banner .title-bx p{
+  margin:auto;
+  width: 70%;
+  padding-bottom: 3rem;
+}
+
+#cta-banner .title-bx h1,
+#cta-banner .title-bx p{
+  color: white;
+}
