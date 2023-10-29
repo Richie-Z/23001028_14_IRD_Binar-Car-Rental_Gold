@@ -158,3 +158,56 @@
 #why-us .list-item .item .item-title{
   font-size:18px;
 }
+
+#testimonial .title-bx{
+  text-align: center;
+}
+
+#testimonial .carousel-item{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0rem;
+  overflow: hidden; 
+}
+
+#testimonial .carousel-item .item{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem;
+  background-color: #F1F3FF;
+  border-radius:10px;
+  box-shadow: 0px 10px 19px -7px rgba(0,0,0,0.1);
+  width: 40%;
+  flex-shrink: 0;
+}
+
+#testimonial .carousel-item .item .the-testimony{
+  font-weight: 700;
+  padding: 1rem 0rem;
+}
+
+#testimonial .carousel-btn{
+  padding: 2rem 0rem;
+  display:flex;
+  justify-content:center;
+  gap: 1rem;
+}
+
+#testimonial .carousel-btn button{
+  border: 1px solid #C4C4C4;
+  border-radius: 2rem;
+  padding: .5rem;
+  background-color: #fff;
+}
+
+#testimonial .carousel-btn button.active{
+  background-color: #5CB85F;
+}
+
+#testimonial .carousel-btn button.active svg path{
+  stroke: #fff
+}
+
