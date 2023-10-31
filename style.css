@@ -280,3 +280,33 @@ details > summary::-webkit-details-marker {
 details > p{
   margin-top: 2rem;
 }
+
+footer{
+  display: flex;
+  gap: 2rem;
+  padding: 5rem 12rem;
+}
+
+footer  p{
+  font-weight: 700;
+  margin:1rem 0rem;
+}
+
+footer .information{
+  width: 30%;
+}
+footer .link,
+footer .connect,
+footer .copyright{
+  width:25%;
+}
+
+footer .link{
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+footer .link a{
+  margin:.6rem 0rem;
+}
