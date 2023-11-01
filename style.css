@@ -336,7 +336,7 @@ footer .link a{
 }
 
 .search-form .form-group{
-  min-width: 22%;
+  min-width: 21%;
 }
 
 .search-form input,
@@ -370,5 +370,5 @@ footer .link a{
 
 .search-form .btn{
   text-align: right;
-  padding:1rem;
+  padding: 1rem;
 }
