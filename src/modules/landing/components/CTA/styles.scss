@@ -1,0 +1,25 @@
+@import '@/common/styles/_variables.scss';
+
+#cta-banner{
+  margin: 2rem $base-x-spacing; 
+  text-align:center;
+  background-color: $primary-color;
+  border-radius: 1rem;
+  padding: 7rem 0rem;
+
+  .title-bx {
+    margin:auto;
+    width:50%;
+
+    p{
+      margin:auto;
+      width: 70%;
+      padding-bottom: 3rem;
+    }
+
+    h1, p{
+      color: white;
+    }
+  }
+}
+

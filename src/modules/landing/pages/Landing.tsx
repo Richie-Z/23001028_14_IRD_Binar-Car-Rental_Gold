@@ -3,6 +3,7 @@ import Footer from "@/common/components/Footer"
 import OurService from "../components/OurService"
 import WhyUs from "../components/WhyUs"
 import Testimonial from "../components/Testimonial"
+import CTA from "../components/CTA"
 
 export default function Landing() {
   return (
@@ -11,6 +12,7 @@ export default function Landing() {
       <OurService />
       <WhyUs />
       <Testimonial />
+      <CTA />
       <Footer />
     </>
   )
