@@ -10,5 +10,7 @@ $font-weight-bold: 700;
 
 // Spacing
 $base-x-spacing: 12rem;
+$base-y-spacing: 5rem;
+$base-spacing: $base-y-spacing $base-x-spacing;
 $border-radius: 10px;
 $box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);

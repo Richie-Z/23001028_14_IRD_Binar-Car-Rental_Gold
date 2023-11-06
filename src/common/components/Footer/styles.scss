@@ -1,0 +1,41 @@
+@import '@/common/styles/_variables.scss';
+
+footer{
+  display: flex;
+  gap: 2rem;
+  padding: $base-spacing;
+
+  svg{
+    fill: $primary-color;
+  }
+
+  p{
+    font-weight: $font-weight-bold;
+    margin:1rem 0rem;
+  }
+
+  .information{
+    width: 30%;
+  }
+
+  .link, .connect, .copyright{
+    width:25%;
+  }
+
+  .link{
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    
+    a{
+      margin:.6rem 0rem;
+    }
+  }
+
+  .connect{
+    .icons{
+      display: flex;
+      gap: 10px;
+    }
+  }
+}
