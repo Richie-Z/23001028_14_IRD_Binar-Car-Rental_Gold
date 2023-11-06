@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '@/common/components/Button'
 import './styles.scss'
 
 type HeaderProps = {
@@ -30,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ includeHero = false }) => {
               terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu
               untuk sewa mobil selama 24 jam.
             </p>
-            <button className="btn">Mulai Sewa Mobil</button>
+            <Button title="Mulai Sewa Mobil" />
           </div>
           <div className="right">
             <img src="/images/mercedes-car.png" alt="Mercedes Car" />
