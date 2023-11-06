@@ -1,0 +1,19 @@
+@import '@/common/styles/_variables.scss';
+
+#faq{
+  display:flex;
+  margin: 10rem $base-x-spacing;
+  justify-content: space-between;
+
+  .left{
+    width: 40%
+  }
+
+  .right{
+    width: 60%;
+    margin-left: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

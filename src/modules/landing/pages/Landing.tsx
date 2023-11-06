@@ -4,6 +4,7 @@ import OurService from "../components/OurService"
 import WhyUs from "../components/WhyUs"
 import Testimonial from "../components/Testimonial"
 import CTA from "../components/CTA"
+import FAQ from "../components/FAQ"
 
 export default function Landing() {
   return (
@@ -13,6 +14,7 @@ export default function Landing() {
       <WhyUs />
       <Testimonial />
       <CTA />
+      <FAQ />
       <Footer />
     </>
   )
