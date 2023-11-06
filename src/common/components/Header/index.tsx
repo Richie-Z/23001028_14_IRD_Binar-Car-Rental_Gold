@@ -3,7 +3,7 @@ import Button from '@/common/components/Button'
 import './styles.scss'
 
 type HeaderProps = {
-  includeHero: boolean
+  includeHero?: boolean
 }
 
 const Header: React.FC<HeaderProps> = ({ includeHero = false }) => {

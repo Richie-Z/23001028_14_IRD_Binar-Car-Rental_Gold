@@ -3,7 +3,7 @@ import "./styles.scss"
 
 type ButtonProps = {
   title: string,
-  isSecondary: boolean
+  isSecondary?: boolean
 }
 
 const Button: React.FC<ButtonProps> = ({ title, isSecondary = false }) => {
