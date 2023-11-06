@@ -3,6 +3,10 @@
 #hero {
   background-color: #f1f3ff;
   min-height: 30vh;
+
+  svg{
+    fill: $primary-color;
+  }
 }
 
 .header-nav {

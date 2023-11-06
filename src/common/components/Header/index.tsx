@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = ({ includeHero = false }) => {
       <nav className="header-nav">
         <div className="logo-bx">
           <svg width="100" height="34" viewBox="0 0 100 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="34" fill="#0D28A6" />
+            <rect width="100" height="34" />
           </svg>
         </div>
         <div className="quick-link">
@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ includeHero = false }) => {
           <div className="right">
             <img src="/images/mercedes-car.png" alt="Mercedes Car" />
             <svg width="704" height="243" viewBox="0 0 704 243" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 60C0 26.8629 26.8629 0 60 0H704V243H0V60Z" fill="#0D28A6" />
+              <path d="M0 60C0 26.8629 26.8629 0 60 0H704V243H0V60Z" />
             </svg>
           </div>
         </div>
