@@ -1,0 +1,32 @@
+@import '@/common/styles/_variables.scss';
+
+#why-us{
+  padding: $base-spacing;
+
+  .list-item{
+    display: flex;
+    width: 100%;
+    margin-top: 2rem;
+    gap: 2rem;
+
+    .item{
+      border: 1px solid #D0D0D0;
+      padding: 2rem;
+      border-radius:10px;
+      width: 25%;
+
+      p{
+        font-weight: 700;
+        padding-top:1rem;
+      }
+
+      .item-icon{
+        width:35px
+      }
+
+      .item-title{
+        font-size:18px;
+      }
+    }
+  }
+}
