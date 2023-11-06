@@ -1,0 +1,59 @@
+@import '@/common/styles/_variables.scss';
+
+#testimonial{
+  .title-bx{
+    text-align: center;
+  }
+
+  .carousel-item{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0rem;
+    overflow: hidden; 
+
+    .item{
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      padding: 4rem;
+      background-color: #F1F3FF;
+      border-radius:10px;
+      box-shadow: 0px 10px 19px -7px rgba(0,0,0,0.1);
+      width: 40%;
+      flex-shrink: 0;
+
+      .the-testimony{
+        font-weight: $font-weight-bold;
+        padding: 1rem 0rem;
+      }
+    }
+
+  }
+
+  .carousel-btn{
+    padding: 2rem 0rem;
+    display:flex;
+    justify-content:center;
+    gap: 1rem;
+
+    button{
+      border: 1px solid #C4C4C4;
+      border-radius: 2rem;
+      padding: .5rem;
+      background-color: $white-color;
+    }
+
+    button.active{
+      background-color: $success-color;
+
+      svg{
+        path{
+          stroke: $white-color,
+        }
+      }
+    }
+  }
+}
+
