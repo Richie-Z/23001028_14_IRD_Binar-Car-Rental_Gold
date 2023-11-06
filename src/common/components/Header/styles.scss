@@ -1,0 +1,55 @@
+#hero {
+  background-color: #f1f3ff;
+  min-height: 30vh;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 12rem 0rem 12rem;
+
+  .quick-link a{
+    margin: 0px 1rem;
+  }
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+
+  .left{
+    margin: auto;
+    font-weight: 700;
+    margin-left: 12rem;
+    width: 70%;
+
+    h1{
+      font-size: 36px;
+      line-height: 54px;
+    }
+
+    p{
+      padding: 1rem 0rem;
+      line-height: 20px;
+    }
+  }
+
+  .right{
+    text-align: right;
+    width: 100%;
+
+    img{
+      width: 704px;
+      position: relative;
+      z-index: 2;
+    }
+
+    svg{
+      position: absolute;
+      top: 15.8rem;
+      right: 0;
+    }
+  }
+}
