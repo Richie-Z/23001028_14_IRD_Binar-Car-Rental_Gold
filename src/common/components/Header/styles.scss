@@ -1,3 +1,5 @@
+@import '@/common/styles/_variables.scss';
+
 #hero {
   background-color: #f1f3ff;
   min-height: 30vh;
@@ -6,7 +8,7 @@
 .header-nav {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 12rem 0rem 12rem;
+  padding: 2rem $base-x-spacing 0rem $base-x-spacing;
 
   .quick-link a{
     margin: 0px 1rem;
@@ -21,8 +23,8 @@
 
   .left{
     margin: auto;
-    font-weight: 700;
-    margin-left: 12rem;
+    font-weight: $font-weight-bold;
+    margin-left: $base-x-spacing;
     width: 70%;
 
     h1{
