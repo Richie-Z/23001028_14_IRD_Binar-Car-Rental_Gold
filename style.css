@@ -16,6 +16,12 @@
   font-size: 15px;
 }
 
+.btn-secondary{
+  border: 1px solid #0D28A6;
+  background-color: #FFFFFF;
+  color: #0D28A6;
+}
+
 .title-bx{
   font-weight: 700;
 }
@@ -35,6 +41,7 @@
 
 #hero {
   background-color: #f1f3ff;
+  min-height: 30vh;
 }
 
 .header-nav {
@@ -312,17 +319,21 @@ footer .link a{
 }
 
 .search-container{
-  padding: 0rem 12rem;
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  margin: 0rem 12rem;
+  border-radius: 10px;
+  margin-top: -3rem;
+  padding: 2rem;
+  z-index: 100;
+}
+
+.search-container h4{
+  margin-bottom: 1rem;
 }
 
 .search-form{
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
   display: flex;
-  padding: 2rem;
-  margin-top: -3rem;
-  z-index: 100;
-  background: #fff;
   position: relative;
   gap: .5rem;
   align-items: flex-end;
@@ -371,4 +382,42 @@ footer .link a{
 .search-form .btn{
   text-align: right;
   padding: 1rem;
+}
+
+#items{
+  margin:5rem 12rem;
+  display: flex;
+  gap:2rem;
+}
+
+.item-container{
+  max-width: 30%;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 2rem 1rem;
+  background-color:#FFF;
+  border-radius: 10px;
+}
+
+.item-container .item-img{
+  text-align:center;
+  padding:2rem 0rem;
+}
+
+.item-title{
+  margin: 1rem 0rem;
+}
+
+.item-price{
+  margin: 1rem 0rem;
+  font-weight: 700;
+  font-size:18px
+} 
+
+.item-desc{
+  margin: 1rem 0rem;
+  font-weight: 700;
+}
+
+.item-container .btn{
+  width: 100%;
 }
