@@ -1,0 +1,49 @@
+#our-services {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 12rem;
+
+  .left{
+    width: 100%;
+    text-align: left;
+
+    #green-circle{
+      position: absolute;
+      left: 7rem;
+    }
+
+    #red-circle{
+      position: absolute;
+      left: 33rem;
+      margin-top: 4rem;
+    }
+
+    #yellow-circle{
+      position: absolute;
+      left: 10rem;
+      margin-top: 21rem;
+    }
+  }
+
+  .right{
+    width: 100%;
+    margin: auto;
+    font-weight: 700;
+
+    p{
+      span{
+        vertical-align: middle;
+        padding-right: 0.8rem;
+      }
+    }
+  }
+
+  .service-list{
+    p{
+      padding: 0.5rem 0rem;
+      user-select: none;
+      cursor: pointer;
+    }
+  }
+  
+}
