@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '@/common/components/Button'
 import './styles.scss'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 type HeaderProps = {
   includeHero?: boolean
@@ -9,6 +9,8 @@ type HeaderProps = {
 }
 
 const Header: React.FC<HeaderProps> = ({ includeHero = false, includeBtn = true }) => {
+  const navigate = useNavigate()
+
   return (
     <section id="hero">
       <nav className="header-nav">
@@ -34,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ includeHero = false, includeBtn = true 
               untuk sewa mobil selama 24 jam.
             </p>
             {includeBtn && (
-              <Button title="Mulai Sewa Mobil" to='/search' />
+              <Button title="Mulai Sewa Mobil" onClick={() => navigate('/search')} />
             )}
           </div>
           <div className="right">

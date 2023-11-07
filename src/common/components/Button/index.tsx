@@ -1,16 +1,15 @@
-import React from "react"
+import { FC, MouseEventHandler } from "react"
 import "./styles.scss"
-import { Link } from "react-router-dom"
 
 type ButtonProps = {
   title: string,
   isSecondary?: boolean,
-  to?: string
+  onClick?: MouseEventHandler<HTMLButtonElement>
 }
 
-const Button: React.FC<ButtonProps> = ({ title, isSecondary = false, to }) => {
+const Button: FC<ButtonProps> = ({ title, isSecondary = false, onClick = () => console.log('sup!') }) => {
   return (
-    <Link className={`btn ${isSecondary && 'btn-secondary'}`} to={to ?? ""}>{title}</Link>
+    <button className={`btn ${isSecondary && 'btn-secondary'}`} onClick={onClick}>{title}</button>
   );
 };
 
