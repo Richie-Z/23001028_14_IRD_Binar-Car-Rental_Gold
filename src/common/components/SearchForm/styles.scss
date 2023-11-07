@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
+@import '@/common/styles/_variables.scss';
+
+.hero-section{
+  .btn{
+    display: none;
+  }
+}
+
+.search-container{
+  background: $white-color;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  margin: 0rem $base-x-spacing;
+  border-radius: 10px;
+  margin-top: -3rem;
+  padding: 2rem;
+  position: relative;
+  z-index: 100;
+
+  h4{
+    margin-bottom: 1rem;
+  }
+}
+
+.search-form{
+  display: flex;
+  justify-content: space-between;
+  gap: .5rem;
+  align-items: flex-end;
+
+  p{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .form-group{
+    min-width: 21%;
+  }
+
+  input, select{
+    border: 1px solid #CCCCCC;
+    border-radius: 1px;
+    padding: 1rem 2rem 1rem 1rem;
+    font-size: 14px;
+    background: #fff;
+    color: #8A8A8A;
+    width: -webkit-fill-available;
+  }
+
+  select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(/images/fi_chevron-down.svg) 96%/10% no-repeat ;
+
+    &:focus{
+      background: url(/images/fi_chevron-up.svg) 96%/10% no-repeat ;
+    }
+  }
+
+  input:focus,
+  input:active,
+  select:focus,
+  select:active{
+    outline: #35B0A7 solid 1px;
+  }
+
+  input:disabled,
+  select:disabled{
+    background-color: #D0D0D0;
+  }
+
+  .btn{
+    text-align: right;
+    padding: 1rem;
+  }
+}
