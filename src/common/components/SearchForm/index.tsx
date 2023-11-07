@@ -1,12 +1,20 @@
+import { FC, MouseEventHandler } from 'react';
 import './styles.scss'
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
+import Button from '../Button';
 
 type OptionType = {
   value: string,
   label: string
 }
-const SearchForm = () => {
+
+type SearchFormProps = {
+  isSearching: boolean
+  onSearchClick: MouseEventHandler<HTMLButtonElement>
+}
+
+const SearchForm: FC<SearchFormProps> = ({ isSearching, onSearchClick }) => {
   const cattegoryOptions: OptionType[] = [
     { value: "2 - 4 Orang", label: "2 - 4 Orang" },
     { value: "4 - 6 Orang", label: "4 - 6 Orang" },
@@ -28,22 +36,22 @@ const SearchForm = () => {
       <form action="" className="search-form">
         <div className="form-group">
           <p>Nama Mobil</p>
-          <input type="text" placeholder="Ketik nama/tipe mobil" />
+          <input type="text" placeholder="Ketik nama/tipe mobil" disabled={!isSearching} />
         </div>
         <div className="form-group">
           <p>Kategori</p>
-          <Dropdown options={cattegoryOptions} onChange={(arg) => console.log(arg)} placeholder="Masukan Kapistas Mobil" />
+          <Dropdown options={cattegoryOptions} onChange={(arg) => console.log(arg)} placeholder="Masukan Kapistas Mobil" disabled={!isSearching} />
         </div>
         <div className="form-group">
           <p>Harga</p>
-          <Dropdown options={priceOptions} onChange={(arg) => console.log(arg)} placeholder="Masukan Harga Sewa Perhari" />
+          <Dropdown options={priceOptions} onChange={(arg) => console.log(arg)} placeholder="Masukan Harga Sewa Perhari" disabled={!isSearching} />
         </div>
         <div className="form-group">
           <p >Status</p>
-          <Dropdown options={statusOptions} onChange={(arg) => console.log(arg)} placeholder="Pilih Status" />
+          <Dropdown options={statusOptions} onChange={(arg) => console.log(arg)} placeholder="Pilih Status" disabled={!isSearching} />
         </div>
         <div>
-          <button className="btn">Cari Mobil</button>
+          <Button title={isSearching ? 'Cari Mobil' : 'Edit '} onClick={onSearchClick} isSecondary={!isSearching} />
         </div>
       </form>
     </div>

@@ -9,7 +9,7 @@ type ButtonProps = {
 
 const Button: FC<ButtonProps> = ({ title, isSecondary = false, onClick = () => console.log('sup!') }) => {
   return (
-    <button className={`btn ${isSecondary && 'btn-secondary'}`} onClick={onClick}>{title}</button>
+    <button type="button" className={`btn ${isSecondary && 'btn-secondary'}`} onClick={onClick}>{title}</button>
   );
 };
 
