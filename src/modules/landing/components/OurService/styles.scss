@@ -4,29 +4,29 @@
   padding: 5rem 12rem;
 
   .left{
-    width: 100%;
-    text-align: left;
+    width: 50%;
+    text-align: center;
 
     #green-circle{
       position: absolute;
-      left: 7rem;
+      left: 12rem;
     }
 
     #red-circle{
       position: absolute;
-      left: 33rem;
+      left: 38rem;
       margin-top: 4rem;
     }
 
     #yellow-circle{
       position: absolute;
-      left: 10rem;
+      left: 15rem;
       margin-top: 21rem;
     }
   }
 
   .right{
-    width: 100%;
+    width: 45%;
     margin: auto;
     font-weight: 700;
 
