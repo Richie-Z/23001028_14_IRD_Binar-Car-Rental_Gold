@@ -16,10 +16,10 @@ const Header: React.FC<HeaderProps> = ({ includeHero = false }) => {
           </svg>
         </div>
         <div className="quick-link">
-          <a href="">Our Service</a>
-          <a href="">Why Us</a>
-          <a href="">Testimonial</a>
-          <a href="">FAQ</a>
+          <a href="#our-services">Our Service</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#testimonial">Testimonial</a>
+          <a href="#faq">FAQ</a>
         </div>
       </nav>
       {includeHero && (

@@ -8,6 +8,10 @@
   font-family: $font-family;
 }
 
+html, body{
+  scroll-behavior: smooth;
+}
+
 .title-bx{
   font-weight: $font-weight-bold;
 }
