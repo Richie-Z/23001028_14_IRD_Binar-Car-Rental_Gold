@@ -1,8 +1,7 @@
-import { Swiper, SwiperClass, SwiperRef, SwiperSlide } from 'swiper/react';
-
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+import { useRef } from 'react';
 import './styles.scss'
 import 'swiper/css';
-import { useRef } from 'react';
 
 type TestimonialType = {
   imgPath: string
@@ -70,9 +69,9 @@ export default function Testimonial() {
       </Swiper>
       <div className="carousel-btn">
         <button onClick={() => {
-          const { current } = swiperRef;
-          const prevIndex = current?.activeIndex - 1
-          current?.slideTo(prevIndex < 0 ? testimonialItems.length - 1 : prevIndex);
+          const { current: swiper } = swiperRef;
+          const prevIndex = (swiper?.activeIndex ?? 0) - 1
+          swiper?.slideTo(prevIndex < 0 ? testimonialItems.length - 1 : prevIndex);
         }}>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.5 15L7.5 10L12.5 5" stroke="#222222" strokeWidth="2" strokeLinecap="round"
@@ -80,9 +79,9 @@ export default function Testimonial() {
           </svg>
         </button>
         <button className="active" onClick={() => {
-          const { current } = swiperRef;
-          const nextIndex = current?.activeIndex + 1
-          current?.slideTo(nextIndex >= testimonialItems.length ? 0 : nextIndex);
+          const { current: swiper } = swiperRef;
+          const nextIndex = (swiper?.activeIndex ?? 0) + 1
+          swiper?.slideTo(nextIndex >= testimonialItems.length ? 0 : nextIndex);
         }}>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7.5 15L12.5 10L7.5 5" stroke="#222222" strokeWidth="2" strokeLinecap="round"
