@@ -48,7 +48,7 @@ body.overlay {
     min-width: 21%;
   }
 
-  input, select{
+  input, .Dropdown-control{
     border: 1px solid #CCCCCC;
     border-radius: 1px;
     padding: 1rem 2rem 1rem 1rem;
@@ -58,26 +58,35 @@ body.overlay {
     width: -webkit-fill-available;
   }
 
-  select{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: url(/images/fi_chevron-down.svg) 96%/10% no-repeat ;
+  .Dropdown-option, .Dropdown-placeholder{
+    font-family: 'Rubik', sans-serif;
+    color: #8A8A8A;
+  }
 
-    &:focus{
-      background: url(/images/fi_chevron-up.svg) 96%/10% no-repeat ;
+  .Dropdown-arrow{
+    margin-top:.5rem;
+  }
+
+  .Dropdown-menu{
+    border:0px;
+    margin-top:.2rem;
+    box-shadow: 0px 2px 16px 0px #0000001A;
+
+    .Dropdown-option.is-selected,
+    .Dropdown-option:hover{
+      background-color: $success-color-hover;
+      color: $success-color-bold;
     }
   }
 
   input:focus,
   input:active,
-  select:focus,
-  select:active{
-    outline: #35B0A7 solid 1px;
+  .Dropdown-root.is-open > .Dropdown-control{
+    outline: $success-color-bold solid 1px;
   }
 
   input:disabled,
-  select:disabled{
+  .Dropdown-disabled{
     background-color: #D0D0D0;
   }
 
