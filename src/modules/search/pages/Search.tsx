@@ -5,7 +5,7 @@ import SearchForm from "@/common/components/SearchForm"
 export default function Search() {
   return (
     <>
-      <Header includeHero={true} />
+      <Header includeHero={true} includeBtn={false} />
       <SearchForm />
       <Footer />
     </>

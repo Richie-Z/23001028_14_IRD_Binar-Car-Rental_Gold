@@ -4,9 +4,10 @@ import './styles.scss'
 
 type HeaderProps = {
   includeHero?: boolean
+  includeBtn?: boolean
 }
 
-const Header: React.FC<HeaderProps> = ({ includeHero = false }) => {
+const Header: React.FC<HeaderProps> = ({ includeHero = false, includeBtn = true }) => {
   return (
     <section id="hero">
       <nav className="header-nav">
@@ -31,7 +32,9 @@ const Header: React.FC<HeaderProps> = ({ includeHero = false }) => {
               terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu
               untuk sewa mobil selama 24 jam.
             </p>
-            <Button title="Mulai Sewa Mobil" />
+            {includeBtn && (
+              <Button title="Mulai Sewa Mobil" to='/search' />
+            )}
           </div>
           <div className="right">
             <img src="/images/mercedes-car.png" alt="Mercedes Car" />
