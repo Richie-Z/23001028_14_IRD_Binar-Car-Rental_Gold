@@ -9,10 +9,10 @@ export default function Footer() {
         <p>081-233-334-808</p>
       </div>
       <div className="link">
-        <a href="">Our services</a>
-        <a href="">Why Us</a>
-        <a href="">Testimonial</a>
-        <a href="">FAQ</a>
+        <a href="#our-services">Our Service</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#testimonial">Testimonial</a>
+        <a href="#faq">FAQ</a>
       </div>
       <div className="connect">
         <p>Connect with us</p>
