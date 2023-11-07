@@ -1,12 +1,5 @@
 @import '@/common/styles/_variables.scss';
-
-@mixin bgColor($color){
-  background-color: $color;
-
-  &:hover{
-    background-color: darken($color, 20%);
-  }
-}
+@import '@/common/styles/_mixin.scss';
 
 .btn {
   @include bgColor($success-color);

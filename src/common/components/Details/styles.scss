@@ -13,12 +13,12 @@ details{
     align-items: center;
     list-style: none;
 
-    ::-webkit-details-marker {
+    &::-webkit-details-marker {
       display: none;
     }
   }
 
-  >p{
+  > p{
     margin-top: 2rem;
   }
 }
