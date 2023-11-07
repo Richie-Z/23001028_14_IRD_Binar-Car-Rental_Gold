@@ -1,4 +1,8 @@
+import { Swiper, SwiperClass, SwiperRef, SwiperSlide } from 'swiper/react';
+
 import './styles.scss'
+import 'swiper/css';
+import { useRef } from 'react';
 
 type TestimonialType = {
   imgPath: string
@@ -7,6 +11,7 @@ type TestimonialType = {
 }
 
 export default function Testimonial() {
+  const swiperRef = useRef<SwiperClass>();
   const testimonialItems: TestimonialType[] = [
     {
       imgPath: '/images/img-photo.png',
@@ -24,7 +29,7 @@ export default function Testimonial() {
       imgPath: '/images/img-photo.png',
       testimony: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”',
       name: 'John Dee 32, Bromo'
-    }
+    },
   ]
   return (
     <section id="testimonial">
@@ -32,9 +37,16 @@ export default function Testimonial() {
         <h3>Testimonial</h3>
         <p>Berbagai review positif dari para pelanggan kami</p>
       </div>
-      <div className="carousel-item">
+      <Swiper
+        onSwiper={(swiper) => swiperRef.current = swiper}
+        className="carousel-item"
+        spaceBetween={50}
+        loop={true}
+        width={600}
+        initialSlide={1}
+      >
         {testimonialItems.map((val, index) => (
-          <div className="item" key={index}>
+          <SwiperSlide className="item" key={index}>
             <div className="item-img">
               <img src={val.imgPath} alt={val.name} />
             </div>
@@ -53,24 +65,32 @@ export default function Testimonial() {
               <p className="the-testimony">{val.testimony}</p>
               <p className="author">{val.name}</p>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
       <div className="carousel-btn">
-        <button>
+        <button onClick={() => {
+          const { current } = swiperRef;
+          const prevIndex = current?.activeIndex - 1
+          current?.slideTo(prevIndex < 0 ? testimonialItems.length - 1 : prevIndex);
+        }}>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.5 15L7.5 10L12.5 5" stroke="#222222" strokeWidth="2" strokeLinecap="round"
               strokeLinejoin="round" />
           </svg>
         </button>
-        <button className="active">
+        <button className="active" onClick={() => {
+          const { current } = swiperRef;
+          const nextIndex = current?.activeIndex + 1
+          current?.slideTo(nextIndex >= testimonialItems.length ? 0 : nextIndex);
+        }}>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7.5 15L12.5 10L7.5 5" stroke="#222222" strokeWidth="2" strokeLinecap="round"
               strokeLinejoin="round" />
           </svg>
         </button>
       </div>
-    </section>
+    </section >
 
   )
 }
