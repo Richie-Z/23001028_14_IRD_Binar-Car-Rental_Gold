@@ -1,14 +1,16 @@
 import React from "react"
 import "./styles.scss"
+import { Link } from "react-router-dom"
 
 type ButtonProps = {
   title: string,
-  isSecondary?: boolean
+  isSecondary?: boolean,
+  to?: string
 }
 
-const Button: React.FC<ButtonProps> = ({ title, isSecondary = false }) => {
+const Button: React.FC<ButtonProps> = ({ title, isSecondary = false, to }) => {
   return (
-    <button className={`btn ${isSecondary && 'btn-secondary'}`}>{title}</button>
+    <Link className={`btn ${isSecondary && 'btn-secondary'}`} to={to ?? ""}>{title}</Link>
   );
 };
 
