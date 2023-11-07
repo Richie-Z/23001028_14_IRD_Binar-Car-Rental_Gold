@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '@/common/components/Button'
 import './styles.scss'
+import { Link } from 'react-router-dom'
 
 type HeaderProps = {
   includeHero?: boolean
@@ -11,11 +12,11 @@ const Header: React.FC<HeaderProps> = ({ includeHero = false, includeBtn = true 
   return (
     <section id="hero">
       <nav className="header-nav">
-        <div className="logo-bx">
+        <Link className="logo-bx" to="/">
           <svg width="100" height="34" viewBox="0 0 100 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="100" height="34" />
           </svg>
-        </div>
+        </Link>
         <div className="quick-link">
           <a href="#our-services">Our Service</a>
           <a href="#why-us">Why Us</a>
