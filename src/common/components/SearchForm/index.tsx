@@ -2,7 +2,10 @@ import './styles.scss'
 
 const SearchForm = () => {
   return (
-    <div className="search-container">
+    <div className="search-container"
+      onMouseEnter={() => document.body.classList.add('overlay')}
+      onMouseLeave={() => document.body.classList.remove('overlay')}
+    >
       <form action="" className="search-form">
         <div className="form-group">
           <p>Nama Mobil</p>
