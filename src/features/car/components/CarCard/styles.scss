@@ -1,0 +1,31 @@
+.item-container{
+  max-width: 30%;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 2rem 1rem;
+  background-color:#FFF;
+  border-radius: 10px;
+
+  .item-img{
+    text-align:center;
+    padding:2rem 0rem;
+  }
+
+  .item-title{
+    margin: 1rem 0rem;
+  }
+
+  .item-price{
+    margin: 1rem 0rem;
+    font-weight: 700;
+    font-size:18px
+  } 
+
+  .item-desc{
+    margin: 1rem 0rem;
+    font-weight: 700;
+  }
+
+  .btn{
+    width: 100%;
+  }
+}

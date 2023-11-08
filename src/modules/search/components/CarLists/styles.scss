@@ -1,0 +1,7 @@
+@import '@/common/styles/_variables.scss';
+
+#items{
+  margin:$base-spacing;
+  display: flex;
+  gap:2rem;
+}
