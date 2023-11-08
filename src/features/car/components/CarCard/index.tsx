@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import './styles.scss'
+import Button from '@/common/components/Button';
 
 const CarCard = () => {
+  const navigate = useNavigate()
   return (
     <div className="item-container">
       <div className="item-img">
@@ -10,7 +13,7 @@ const CarCard = () => {
       <p className="item-price">Rp 500.000 / hari</p>
       <p className="item-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. </p>
-      <button className="btn">Pilih Mobil</button>
+      <Button title="Pilih Mobil" onClick={() => navigate(`/detail/1`)} />
     </div>
   )
 }
