@@ -1,5 +1,5 @@
 .item-container{
-  max-width: 30%;
+  max-width: 28%;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
   padding: 2rem 1rem;
   background-color:#FFF;
@@ -8,6 +8,11 @@
   .item-img{
     text-align:center;
     padding:2rem 0rem;
+    height:10rem;
+
+    img{
+      width: 270px;
+    }
   }
 
   .item-title{

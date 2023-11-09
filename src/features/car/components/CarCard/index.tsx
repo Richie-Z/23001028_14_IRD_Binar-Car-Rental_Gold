@@ -16,7 +16,6 @@ export const CarCard: React.FC<CarCardProps> = ({ car }) => {
         <img src={car.image} alt="" />
       </div>
       <p className="item-title">{car.name}</p>
-      <p className="item-price">Rp 500.000 / hari</p>
       <p className="item-price">{`Rp. ${car.price} / hari`}</p>
       <p className="item-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
         labore et dolore magna aliqua. </p>
