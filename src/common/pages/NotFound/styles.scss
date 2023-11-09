@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+@mixin btnColor($color){
+  background: $color;
+
+  &:hover{
+    @if $color == transparent{
+      background: darken(#fff, 20%);
+    }@else{
+      background: darken($color, 10%);
+    }
+  }
+}
+
+.wrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+
+.not-found{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+
+  img{
+    width: 17rem;
+  }
+
+  h1{
+    font-size: 80px
+  }
+
+  h5{
+    font-size: 40px
+  }
+
+  p{
+    padding: 2rem 0rem;
+    font-weight: 200;
+  }
+
+    .btn{
+      @include btnColor(#f60);
+      margin: .3rem;
+      border: 0px;
+      padding: .6rem 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+
+    }
+}

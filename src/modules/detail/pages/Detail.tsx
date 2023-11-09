@@ -5,7 +5,7 @@ import './styles.scss'
 import { useNavigate, useParams } from "react-router-dom"
 import AboutPacket from "../components/AboutPacket"
 import { CarInformationCard, CarType } from "@/features/car/"
-import { Suspense, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { getCar } from "@/features/car/api"
 
 const Detail = () => {
@@ -14,14 +14,11 @@ const Detail = () => {
   const [car, setCar] = useState<CarType>()
 
   useEffect(() => {
-    let carId: number;
-    try {
-      carId = parseInt(params.id ?? "", 10)
-    } catch {
-      return navigate('/')
+    if (!/\d+/.test(params.id!)) {
+      navigate("/404");
     }
     (async function() {
-      await getCar(carId).then(({ data }) => setCar(data))
+      await getCar(params.id!).then(({ data }) => setCar(data))
     })()
   }, [navigate, params.id])
 
