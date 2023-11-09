@@ -1,12 +1,16 @@
+import React from 'react'
 import './syles.scss'
+import { CarType } from '../..'
+import formatRupiah from '@/common/utils/formatRupiah'
 
-export const CarInformationCard = () => {
+export const CarInformationCard: React.FC<{ car: CarType }> = ({ car }) => {
   return (
     <div className="detail-right">
-      <div className="detail-img">
-        <img src="/images/car-2.png" alt="" />
+      {/*  FIX: the class is not recognized by sass*/}
+      <div className="detail-img" style={{ textAlign: "center" }}>
+        <img src={car.image} alt="" style={{ width: "270px" }} />
       </div>
-      <p className="detail-title">Innova</p>
+      <p className="detail-title">{car.name}</p>
 
       <div className="detail-person">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +31,7 @@ export const CarInformationCard = () => {
       </div>
       <div className="detail-price">
         <p className="detail-title">Total</p>
-        <p className="detail-title">Rp 500.000</p>
+        <p className="detail-title">{formatRupiah(car.price)}</p>
       </div>
     </div>
   )
