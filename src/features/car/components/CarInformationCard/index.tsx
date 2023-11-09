@@ -1,17 +1,16 @@
 import React from 'react'
 import './syles.scss'
-import { CarType } from '../..'
+import { CarType, maximumCapacity } from '../..'
 import formatRupiah from '@/common/utils/formatRupiah'
 
 export const CarInformationCard: React.FC<{ car: CarType }> = ({ car }) => {
   return (
     <div className="detail-right">
-      {/*  FIX: the class is not recognized by sass*/}
+      {/*  FIX: the class is not recognized by sass */}
       <div className="detail-img" style={{ textAlign: "center" }}>
         <img src={car.image} alt="" style={{ width: "270px" }} />
       </div>
       <p className="detail-title">{car.name}</p>
-
       <div className="detail-person">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -27,7 +26,7 @@ export const CarInformationCard: React.FC<{ car: CarType }> = ({ car }) => {
             d="M4.5 5.5C5.60457 5.5 6.5 4.60457 6.5 3.5C6.5 2.39543 5.60457 1.5 4.5 1.5C3.39543 1.5 2.5 2.39543 2.5 3.5C2.5 4.60457 3.39543 5.5 4.5 5.5Z"
             stroke="#8A8A8A" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-        <span>6-8 Orang</span>
+        <span>{maximumCapacity(car.category)}</span>
       </div>
       <div className="detail-price">
         <p className="detail-title">Total</p>

@@ -1,3 +1,5 @@
 export enum CarCategoryEnum {
-  small, medium, large
+  small = "small",
+  medium = "medium",
+  large = "large"
 }
