@@ -1,9 +1,7 @@
-import { CarCategoryEnum } from "../enums"
-
 export interface ListCarsDTO {
-  name: string
-  category?: CarCategoryEnum
-  isRented?: boolean
+  name?: string
+  category?: string
+  isRented?: string
   minPrice?: number
   maxPrice?: number
 }
