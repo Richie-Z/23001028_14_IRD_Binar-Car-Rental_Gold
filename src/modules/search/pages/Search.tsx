@@ -1,7 +1,7 @@
 import Header from "@/common/components/Header"
 import Footer from "@/common/components/Footer"
 import SearchForm from "@/common/components/SearchForm"
-import CarCard from "@/features/car/components/CarCard"
+import { CarCard } from "@/features/car"
 import { useState } from "react"
 import "./styles.scss"
 

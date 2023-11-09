@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import './styles.scss'
 import Button from '@/common/components/Button';
 
-const CarCard = () => {
+export const CarCard = () => {
   const navigate = useNavigate()
   return (
     <div className="item-container">
@@ -17,5 +17,3 @@ const CarCard = () => {
     </div>
   )
 }
-
-export default CarCard;
