@@ -29,10 +29,10 @@ const Header: FC<HeaderProps> = ({ includeHero = false, includeBtn = true }) => 
             </svg>
           </div>
           <div className='quick-link'>
-            <a href="#our-services">Our Service</a>
-            <a href="#why-us">Why Us</a>
-            <a href="#testimonial">Testimonial</a>
-            <a href="#faq">FAQ</a>
+            <a href="#our-services" onClick={toggleNav}>Our Service</a>
+            <a href="#why-us" onClick={toggleNav}>Why Us</a>
+            <a href="#testimonial" onClick={toggleNav}>Testimonial</a>
+            <a href="#faq" onClick={toggleNav}>FAQ</a>
           </div>
         </div>
       )}
