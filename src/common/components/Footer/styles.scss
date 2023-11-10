@@ -39,3 +39,27 @@ footer{
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  footer{
+    display: block;
+    padding: 1rem;
+
+    .information, .copyright{
+      margin-top:2rem;
+      width: 95%;
+    }
+
+    .link{
+      margin-left: 0rem;
+    }
+
+    .connect{
+      width: 95%;
+      .icons{
+        svg{
+        }
+      }
+    }
+  }
+}
