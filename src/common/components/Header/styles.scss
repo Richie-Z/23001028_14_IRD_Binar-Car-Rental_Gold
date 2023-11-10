@@ -17,6 +17,10 @@
   .quick-link a{
     margin: 0px 1rem;
   }
+
+  .hamburger {
+    display: none;
+  }
 }
 
 .hero-section {
@@ -56,6 +60,42 @@
       position: absolute;
       top: 15.8rem;
       right: 0;
+      width:704px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-nav{
+    padding: 1.5rem;
+
+    .quick-link a{
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+
+  .hero-section {
+    display: block;
+    
+    .left{
+      margin:1rem;
+      width: 95%;
+    }
+
+    .right{
+      img{
+        width:344.22px;
+      }
+
+      svg{
+        width:344.22px; 
+        top: 31.8rem;
+        height: 118.81px;
+      }
     }
   }
 }
