@@ -1,5 +1,29 @@
 @import '@/common/styles/_variables.scss';
 
+.mobile-nav{
+  position: fixed;
+  z-index:  1002;
+  min-height: 100vh;
+  background: $white-color;
+  padding: 2rem 1rem 0rem 2rem;
+  right:0;
+
+  .title{
+    display: flex;
+    font-size: 18px; 
+    justify-content: space-between;
+    align-items: center;
+    width: 10rem;
+    margin-bottom:1rem
+  }
+
+  .quick-link{
+    display: flex;
+    flex-direction: column;
+    gap:1rem
+  }
+}
+
 #hero {
   background-color: #f1f3ff;
   min-height: 30vh;
@@ -75,6 +99,7 @@
 
     .hamburger {
       display: block;
+      z-index: 1000;
     }
   }
 
