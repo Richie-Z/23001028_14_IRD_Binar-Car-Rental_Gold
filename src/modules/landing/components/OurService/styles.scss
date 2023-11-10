@@ -47,3 +47,43 @@
   }
   
 }
+
+@media only screen and (max-width: 768px) {
+  #our-services {
+    display: block;
+    margin: 2rem 1rem;
+    padding: 1rem;
+
+    .left{
+      width: 100%;
+      margin-bottom: 2rem;
+
+      img{
+        width: 199.26px; 
+      }
+
+      #green-circle{
+        position: absolute;
+        left: 4rem;
+        margin-top:-2rem;
+        width: 71px;
+      }
+
+      #red-circle{
+        position: absolute;
+        left: 20rem;
+        margin-top: 4rem;
+      }
+
+      #yellow-circle{
+        position: absolute;
+        left: 5rem;
+        margin-top: 11rem;
+      }
+
+    }
+    .right{
+      width: 100%;
+    }
+  }
+}
