@@ -25,7 +25,7 @@ const Detail = () => {
         setCar(car.data)
       } catch (error) {
         toast.error((error as AxiosError).message ?? "Error Occured")
-        navigate('/')
+        navigate('/404')
       }
     })()
   }, [navigate, params.id])
