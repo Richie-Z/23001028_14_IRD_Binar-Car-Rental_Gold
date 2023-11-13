@@ -16,15 +16,17 @@ const Detail = () => {
   const [car, setCar] = useState<CarType>()
 
   useEffect(() => {
+    const toastId = toast.loading("Searching car...")
     if (!/\d+/.test(params.id!)) {
       navigate("/404");
     }
     (async function() {
       try {
         const car = await getCar(params.id!)
+        toast.update(toastId, { render: "Done", type: "success", isLoading: false, autoClose: 1000, style: { display: "none" } })
         setCar(car.data)
       } catch (error) {
-        toast.error((error as AxiosError).message ?? "Error Occured")
+        toast.update(toastId, { render: (error as AxiosError).message ?? "Error Occured", type: "error", isLoading: false, autoClose: 1000 })
         navigate('/404')
       }
     })()

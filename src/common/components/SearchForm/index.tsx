@@ -42,6 +42,7 @@ const SearchForm: FC<SearchFormProps> = ({ isSearching, onSearchClick }) => {
       return;
     }
 
+    const toastId = toast.loading("Searching cars...")
     event.preventDefault()
     const listCarDto: ListCarsDTO = {
       name: name,
@@ -53,9 +54,10 @@ const SearchForm: FC<SearchFormProps> = ({ isSearching, onSearchClick }) => {
 
     try {
       const { data: { cars } } = await listCars(listCarDto)
+      toast.update(toastId, { render: "Done", type: "success", isLoading: false, autoClose: 1000, style: { display: "none" } })
       onSearchClick(cars)
     } catch (error) {
-      toast.error(error.message ?? "Error Occured")
+      toast.update(toastId, { render: error.message ?? "Error Occured", type: "error", isLoading: false, autoClose: 1000 })
     }
   }
 
