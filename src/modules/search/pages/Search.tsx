@@ -20,6 +20,11 @@ const Search = () => {
           ))}
         </section>
       )}
+      {(!isSearching && cars.length === 0) && (
+        <div class="no-cars-found">
+          <h1>No Cars Found!</h1>
+        </div>
+      )}
       <Footer />
     </>
   )
