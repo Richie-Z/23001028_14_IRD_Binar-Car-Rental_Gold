@@ -5,6 +5,7 @@ import 'react-dropdown/style.css';
 import Button from '../Button';
 import { CarCategoryEnum, CarType, ListCarsDTO, maximumCapacity } from '@/features/car';
 import { listCars } from '@/features/car/api';
+import { toast } from 'react-toastify';
 
 type OptionType = {
   value: string,
@@ -50,8 +51,12 @@ const SearchForm: FC<SearchFormProps> = ({ isSearching, onSearchClick }) => {
       isRented: status
     }
 
-    const { data: { cars } } = await listCars(listCarDto)
-    onSearchClick(cars)
+    try {
+      const { data: { cars } } = await listCars(listCarDto)
+      onSearchClick(cars)
+    } catch (error) {
+      toast.error(error.message ?? "Error Occured")
+    }
   }
 
   return (

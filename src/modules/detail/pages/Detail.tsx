@@ -7,6 +7,8 @@ import AboutPacket from "../components/AboutPacket"
 import { CarInformationCard, CarType } from "@/features/car/"
 import { useEffect, useState } from "react"
 import { getCar } from "@/features/car/api"
+import { toast } from "react-toastify"
+import { AxiosError } from "axios"
 
 const Detail = () => {
   const navigate = useNavigate()
@@ -18,7 +20,13 @@ const Detail = () => {
       navigate("/404");
     }
     (async function() {
-      await getCar(params.id!).then(({ data }) => setCar(data))
+      try {
+        const car = await getCar(params.id!)
+        setCar(car.data)
+      } catch (error) {
+        toast.error((error as AxiosError).message ?? "Error Occured")
+        navigate('/')
+      }
     })()
   }, [navigate, params.id])
 
