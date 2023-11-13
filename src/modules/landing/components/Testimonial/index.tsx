@@ -25,7 +25,7 @@ export default function Testimonial() {
     },
 
     {
-      imgPath: '/images/img-photo.png',
+      imgPath: '/images/img-photo-2.png',
       testimony: '“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod”',
       name: 'John Dee 32, Bromo'
     },
@@ -39,10 +39,13 @@ export default function Testimonial() {
       <Swiper
         onSwiper={(swiper) => swiperRef.current = swiper}
         className="carousel-item"
-        spaceBetween={50}
         loop={true}
         width={600}
-        initialSlide={1}
+        breakpoints={{
+          768: { slidesPerView: 2, spaceBetween: 150, initialSlide: 0 },
+          1024: { slidesPerView: 1, spaceBetween: 50, initialSlide: 1 },
+        }
+        }
       >
         {testimonialItems.map((val, index) => (
           <SwiperSlide className="item" key={index}>
