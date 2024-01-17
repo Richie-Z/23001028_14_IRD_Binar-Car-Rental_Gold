@@ -57,7 +57,11 @@ const SearchForm: FC<SearchFormProps> = ({ isSearching, onSearchClick }) => {
       toast.update(toastId, { render: "Done", type: "success", isLoading: false, autoClose: 1000, style: { display: "none" } })
       onSearchClick(cars)
     } catch (error) {
-      toast.update(toastId, { render: error.message ?? "Error Occured", type: "error", isLoading: false, autoClose: 1000 })
+      let errorMessage = "Error Occured";
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      }
+      toast.update(toastId, { render: errorMessage ?? "", type: "error", isLoading: false, autoClose: 1000 })
     }
   }
 
